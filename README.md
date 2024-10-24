@@ -9,7 +9,7 @@ Develop a system that allows users to manage various aspects of their bank accou
 
 #### Create New Accounts
 
-As a user, I want to be able to create a new bank account so that I can save or use money.
+As a user, I want to be able to create a new bank account so that I can save or spend money.
 
 #### Acceptance Criteria
 
