@@ -20,8 +20,8 @@ let model = {
         users:[
             {
                 id: "01016612345",
-                name:'ole',
-                password:'1234',
+                name: 'ole',
+                password: '1234',
                 born : '01.01-1964',
                 epost:'ole@norman.no',
                 konto:
@@ -49,7 +49,7 @@ let model = {
                         
                         message: null,
                         recipient: 1,
-                        from: fetchUser(0),
+                        from: null,//fetchUser(0),
                         transaction_id:"ef23421",
                     } ],
             },

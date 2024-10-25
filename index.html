@@ -10,10 +10,19 @@
         <script src="statics/js/modal.js"></script>
         <script src="statics/js/controller.js"></script>
         <script src="statics/js/view.js"></script>
+
+        <script src="statics/js/login/view.js"></script>
+        <script src="statics/js/register/view.js"></script>
+        <script src="statics/js/dashboard/view.js"></script>
+
+        <script src="statics/js/login/controller.js"></script>
+        <script src="statics/js/register/controller.js"></script>
+        <script src="statics/js/dashboard/controller.js"></script>
     
     <script>
     
-    let page = modal.app.currentpage
+    let page = model.app.currentpage
+    console.log(page)
 
     if (page =='register')
     {

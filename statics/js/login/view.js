@@ -5,13 +5,13 @@ function loginView()
     
 
     let html = /*HTML*/`
-        <form onsubmit="loginController()">
+        <form onsubmit="loginController(event)">
             <input type="text" oninput="handlelogin(event, 'uname')" placeholder="Social Security" required>
             <input type="password" oninput="handlelogin(event, 'password')" placeholder="password" required>
             <button id="login" class="btn">login</button> 
-        </form>`;
+        </form>
 
-        <button id="register" class="btn">register</button>
+        <button id="register" class="btn">register</button>`;
     
         document.getElementById("app").innerHTML = html;
 }
