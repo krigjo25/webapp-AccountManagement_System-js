@@ -5,7 +5,7 @@ function loginView()
     
 
     let html = /*HTML*/`
-        <form onsubmit="loginController(event)">
+        <form onsubmit="verifyCredentials(event)">
             <label for="uname">username:</label>
             <input id='uname' type="text" oninput="handlelogin(event, 'uname')" placeholder="Social Security" required>
             <label for="pw">password:</label>
