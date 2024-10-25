@@ -1,13 +1,15 @@
 function loginView()
 {
     let input = model.inputs.login;
-    let page = modal.app.currentpage;
+    let page = model.app.currentpage;
     
 
     let html = /*HTML*/`
         <form onsubmit="loginController(event)">
-            <input type="text" oninput="handlelogin(event, 'uname')" placeholder="Social Security" required>
-            <input type="password" oninput="handlelogin(event, 'password')" placeholder="password" required>
+            <label for="uname">username:</label>
+            <input id='uname' type="text" oninput="handlelogin(event, 'uname')" placeholder="Social Security" required>
+            <label for="pw">password:</label>
+            <input id= 'pw' type="password" oninput="handlelogin(event, 'password')" placeholder="password" required>
             <button id="login" class="btn">login</button> 
         </form>
 
