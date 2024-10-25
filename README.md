@@ -1,4 +1,10 @@
-#   BankenØst
+#   Account Mamangement System
+
+##  Information about the project 
+
+###  Purpose of this assignment
+
+###  Description 
 
 ##  Customer Case: Account Management System
 
@@ -18,6 +24,8 @@ As a user, I want to be able to create a new bank account so that I can save or 
 - The user can choose an account type (savings account, checking account, etc.).
 
 - The user fills out necessary details and confirms the creation.
+
+##  Features
 
 ### Delete Accounts
 
@@ -61,4 +69,13 @@ As a user, I want access to different account types like a savings account with 
 
 - The user can choose an account type when creating a new account.
 
+##  Credits
 
+### Libraries used
+
+### Disclamers
+
+
+
+Sincerely,
+@krigjo25
