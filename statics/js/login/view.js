@@ -1,9 +1,5 @@
 function loginView()
 {
-    let input = model.inputs.login;
-    let page = model.app.currentpage;
-    
-
     let html = /*HTML*/`
         <form onsubmit="verifyCredentials(event)">
             <label for="uname">username:</label>
