@@ -31,31 +31,30 @@
         
         document.addEventListener('DOMContentLoaded', function(){
             updateView();
-        });
 
-        
-        function updateView()
-        {
-            let page = model.app.currentpage
-            console.log(page)
-
-            if (page =='register')
+            function updateView()
             {
-                registerUser();
+                let page = model.app.currentpage
+                console.log(page)
+
+                if (page =='register')
+                {
+                    registerUser();
+                }
+                else if(page == 'dashboard'){
+                    dashboardView();
+                }
+                else if(page == 'transfer'){
+                    transferView();
+                }
+                else if(page == 'profile'){
+                    profileView();
+                }
+                else {
+                    loginView();
+                }
             }
-            else if(page == 'dashboard'){
-                dashboardView();
-            }
-            else if(page == 'transfer'){
-                transferView();
-            }
-            else if(page == 'profile'){
-                profileView();
-            }
-            else {
-                loginView();
-            }
-        }
+        });
     </script>
     </body>
     
