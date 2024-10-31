@@ -1,14 +1,13 @@
+
 function loginView()
 {
     document.getElementById("app").innerHTML = /*HTML*/`
-        <form onsubmit="verifyCredentials(event)">
+        <form onsubmit="handlelogin(event)">
             <label for="uname">username:</label>
-            <input id='uname' type="text" oninput="handlelogin(event, 'uname')" placeholder="Social Security" required>
+            <input id='uname' type="text" placeholder="Social Security">
             <label for="pw">password:</label>
-            <input id= 'pw' type="password" oninput="handlelogin(event, 'password')" placeholder="password" required>
-            <button id="login" class="btn">login</button> <button onclick='model.app.page ="signup"' class="btn">sign up</button>
-        </form>
-
-        `;
-        
+            <input id= 'pw' type="password" placeholder="password">
+            <input type="submit" id="login" class="btn" value="login">
+            <input type="submit" id="signup" class="btn" value="signup"> 
+        </form>`;
 }

@@ -1,7 +1,7 @@
 function signupView()
 {
     document.getElementById('app').innerHTML = /*HTML*/ `
-        <form onsubmit = "registation()">
+        <form onsubmit ="registation()">
             <input type="text" onchange='modal.inputs.register.uname = this.value' placeholder="e.g j245">
             <input type="text" onchange='modal.inputs.register.name = this.value' placeholder='Jhon Doe'>
             <input type="text" onchange='modal.inputs.register.password = this.value' placeholder='password'>
