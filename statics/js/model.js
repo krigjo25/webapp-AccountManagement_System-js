@@ -4,11 +4,18 @@ let model = {
         currentpage:"index",
     },
     inputs: {
+
         registration: {
             name:"",
             username:"",
-            epost:"",
+            email:"",
             password:"",
+            konto: [{
+                name:"",
+                type:"",
+                sum: 0,
+                id:"",
+            }],
         },
         login: {
             uname: "",
