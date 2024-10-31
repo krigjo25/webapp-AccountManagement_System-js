@@ -1,7 +1,7 @@
 let model = {
 
     app: {
-        currentpage:"index",
+        page: "login",
     },
     inputs: {
 

@@ -9,6 +9,9 @@ function verifyCredentials(event, key)
 {
     event.preventDefault();
 
+    let buttons = document.querySelectorAll('#btn');
+    console.log(buttons)
+
     //  Handle the validation values
     handlelogin(event, key)
 

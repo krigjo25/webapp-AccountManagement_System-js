@@ -28,33 +28,33 @@
         <script src="statics/js/dashboard/controller.js"></script>
     
     <script>
-        
-        document.addEventListener('DOMContentLoaded', function(){
-            updateView();
+        updateView();
+        function updateView()
+        {
+            //  Initializing the current page
+            let page = model.app.page;
 
-            function updateView()
+            console.log(page);
+
+            //  Ensure that page is not null
+            if (page == "signup")
             {
-                let page = model.app.currentpage
-                console.log(page)
-
-                if (page =='register')
-                {
-                    registerUser();
-                }
-                else if(page == 'dashboard'){
-                    dashboardView();
-                }
-                else if(page == 'transfer'){
-                    transferView();
-                }
-                else if(page == 'profile'){
-                    profileView();
-                }
-                else {
-                    loginView();
-                }
+                console.log(page);
+                signupView();
             }
-        });
+            else if(page == 'dashboard'){
+                dashboardView();
+            }
+            else if(page == 'transfer'){
+                transferView();
+            }
+            else if(page == 'profile'){
+                profileView();
+            }
+            else {
+                loginView();
+            }
+        }
     </script>
     </body>
     
