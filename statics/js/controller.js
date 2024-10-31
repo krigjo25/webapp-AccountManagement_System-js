@@ -5,28 +5,33 @@ function earaseInputs(arg)
     // Erase all inputs
     if (arg == "registration")
     {
-        model.inputs.registration.name = "";
-        model.inputs.registration.username = "";
-        model.inputs.registration.email = "";
-        model.inputs.registration.password = "";
+        //  Initializing register_input
+        let register_input = model.inputs.registration
 
-        for (let konto in model.inputs.registration.konto)
+        // Erase all information in inputs
+        register_input.name = "";
+        register_input.email = "";
+        register_input.password = "";
+        register_input.username = "";
+
+        for (let konto in register_input.konto)
         {
+            konto.id = null;
+            konto.sum = null;
             konto.name = null;
             konto.type = null;
-            konto.sum = null;
-            konto.id = null;
+            konto.checked = false;
         }
-        model.inputs.registration.konto.name = null;
-        model.inputs.registration.konto.type = null;
-        model.inputs.registration.konto.sum = null;
-        model.inputs.registration.konto.id = null;
 
     }
     else if (arg == "login")
     {
-        model.inputs.login.uname = "";
-        model.inputs.login.password = "";
+        //  Initializing login_input
+        let login_input = model.inputs.login;
+        
+        // Erase all information in inputs
+        login_input.login.uname = "";
+        login_input.login.password = "";
     }
     else if (arg == "transfer")
     {
@@ -35,13 +40,5 @@ function earaseInputs(arg)
         model.inputs.transfer.to = "";
         model.inputs.transfer.message = "";
     }
-    else if (arg == "konto")
-    {
-        model.inputs.konto.name = "";
-        model.inputs.konto.type = "";
-        model.inputs.konto.sum = "";
-        model.inputs.konto.id = "";
-    }
-
 
 }
