@@ -94,5 +94,11 @@ let model = {
                     } ],
             },
             ],
+
+        session:
+        {
+            userid: null,
+            sessionid: null,
+        },
     },
 }
