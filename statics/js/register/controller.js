@@ -49,3 +49,27 @@ function registeration(e)
 
     updateView();
 }
+
+function Validation(e)
+{
+    // form validation
+    let input = e.target;
+    let msg = document.querySelector("#msgbox");
+
+
+    // Check if the input is empty
+    for (let i = 0; i < input.length - 1; i++)
+    {
+        //  Ensure the correct value is assigned to the correct key
+        if (input[i].value === "" || input[i].value === null)
+        {
+            // Assign the value to the key
+            input[i].style.border = "1px solid red";
+            msg.innerHTML = "Please fill in all fields";
+            return false
+        }
+
+    }
+
+
+}
