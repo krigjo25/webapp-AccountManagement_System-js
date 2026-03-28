@@ -1,80 +1,41 @@
-#   Account Mamangement System
+# Sparebank1 Web Application
+A functional banking application interface featuring secure login, fund transfers, and profile management within a modular MVC framework.
 
-##  Information about the project 
+---
 
-###  Purpose of this assignment
+## Overview
+This project is a prototype for a secure banking platform, developed to handle essential financial workflows. It provides a structured environment for users to manage their accounts, execute currency transfers, and update personal profiles. The application relies on a robust MVC (Model-View-Controller) architecture, ensuring that sensitive financial logic is strictly separated from the user interface.
 
-###  Description 
+## Core Features
+* **Secure Authentication**: Dedicated modules for user login and registration to ensure data privacy.
+* **Transaction Management**: A specialized transfer view for managing and executing movements between accounts.
+* **Dashboard Overview**: A centralized hub providing a snapshot of account status and quick access to banking tools.
+* **Modular Controller Logic**: Independent controllers for login, registration, and dashboard operations to maintain high code quality.
+* **Profile Administration**: Interface for users to view and edit their personal banking credentials and settings.
 
-##  Customer Case: Account Management System
+## Installation and Technical Setup
+The application is built using a decoupled JavaScript structure and can be hosted on any standard web server.
 
-### Project Description
-Develop a system that allows users to manage various aspects of their bank accounts, including creating, deleting, transferring, and paying bills, with additional features for different account types.
+### Prerequisites
+* A modern web browser.
+* Access to the `statics/js/` directory containing the core logic.
 
-### User Stories
+### Deployment Steps
+1.  **Extract Components**: Unzip the `js.tar.gz` and ensure the directory structure matches the references in `index.html`.
+2.  **Initialize Environment**: Ensure `model.js` is loaded first to establish the global banking state.
+3.  **Launch**: Open `index.html` to start the application at the default login gateway.
 
-#### Create New Accounts
+## Architecture
+The system utilizes a granular MVC approach:
+* **Global Model (model.js)**: Stores account balances, user data, and the current application state.
+* **Feature Controllers**: Specialized files (e.g., `login/controller.js`, `transfer/controller.js`) manage specific user actions.
+* **Dynamic Views**: View-specific scripts generate the HTML for the dashboard, signup, and profile screens.
 
-As a user, I want to be able to create a new bank account so that I can save or spend money.
+## Contributors
+Developed as a professional-grade financial interface focusing on modularity and user security.
 
-#### Acceptance Criteria
-
-- The user can navigate to a "Create New Account" page.
-
-- The user can choose an account type (savings account, checking account, etc.).
-
-- The user fills out necessary details and confirms the creation.
-
-##  Features
-
-### Delete Accounts
-
-As a user, I want to be able to delete an existing bank account so that I can close an account I no longer need.
-
-#### Acceptance Criteria
-
-- The user can select an account to delete from a list of their accounts.
-
-- The user confirms the deletion with a password or other security mechanism.
-
-### Transfer to Other Accounts
-
-As a user, I want to be able to transfer money between my accounts or to other accounts so that I can manage my financial transactions.
-
-#### Acceptance Criteria
-
-- The user can select the "Transfer" function.
-- The user can input the recipient's account information and the amount.
-
-- The user confirms the transfer with a security check.
-
-### Pay Bills
-
-As a user, I want to be able to pay bills from my account so that I can keep my financial obligations up to date.
-
-#### Acceptance Criteria
-
-- The user can navigate to a "Pay Bills" page.
-
-- The user fills out the recipient's information and the amount.
-
-- The user confirms the payment.
-
-
-### Different Account Types
-
-As a user, I want access to different account types like a savings account with limited withdrawals so that I can have flexible options for my financial situation.
-
-#### Acceptance Criteria
-
-- The user can choose an account type when creating a new account.
-
-##  Credits
-
-### Libraries used
-
-### Disclamers
-
+---
+*Building secure and intuitive digital banking experiences.*
 
 
 Sincerely,
