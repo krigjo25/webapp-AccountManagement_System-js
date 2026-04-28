@@ -1,8 +1,15 @@
-<!DOCTYPE>
-<html>
+<!DOCTYPE html>
+<html lang="en">
     <head>
-        <title></title>
-        <meta>
+        <title>Account Management System</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
+        <style>
+            body { font-family: sans-serif; padding: 20px; }
+            .btn { cursor: pointer; padding: 5px 10px; }
+            form { display: flex; flex-direction: column; max-width: 300px; gap: 10px; }
+        </style>
     </head>
     <body>
         <header>
@@ -10,52 +17,12 @@
         </header>
         <main>
             <div id="app"></div>
+            <div id="msgbox"></div>
         </main>
         <footer>
             <p> &copy; 2021 Sparebank1</p>
         </footer>
         
-        <script src="statics/js/model.js"></script>
-        <script src="statics/js/controller.js"></script>
-        <script src="statics/js/view.js"></script>
-
-        <script src="statics/js/login/view.js"></script>
-        <script src="statics/js/register/view.js"></script>
-        <script src="statics/js/dashboard/view.js"></script>
-
-        <script src="statics/js/login/controller.js"></script>
-        <script src="statics/js/register/controller.js"></script>
-        <script src="statics/js/dashboard/controller.js"></script>
-    
-    <script>
-        updateView();
-        function updateView()
-        {
-            //  Initializing the current page
-            let page = model.app.page;
-
-            console.log(page);
-
-            //  Ensure that page is not null
-            if (page == "signup")
-            {
-                console.log(page);
-                signupView();
-            }
-            else if(page == 'dashboard'){
-                dashboardView();
-            }
-            else if(page == 'transfer'){
-                transferView();
-            }
-            else if(page == 'profile'){
-                profileView();
-            }
-            else {
-                loginView();
-            }
-        }
-    </script>
+        <script type="module" src="/statics/ts/main.ts"></script>
     </body>
-    
 </html>

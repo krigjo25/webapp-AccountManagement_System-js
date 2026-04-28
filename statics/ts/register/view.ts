@@ -1,6 +1,8 @@
-function signupView()
-{
-    document.getElementById('app').innerHTML = /*HTML*/ `
+export function signupView() {
+    const appElement = document.getElementById('app');
+    if (!appElement) return;
+
+    appElement.innerHTML = /*HTML*/ `
         <form onsubmit ="registeration(event)">
             <label for="uname">SocialSecurity:</label>
             <input id="uname" type="text" placeholder="SocialSecurity">
@@ -11,7 +13,5 @@ function signupView()
             <label for="email">e-mail:</label>
             <input id="email" type="text"  placeholder='e-mail'>
             <input type="submit" value="register">
-        </form>
-        
-    </div>`;
+        </form>`;
 }

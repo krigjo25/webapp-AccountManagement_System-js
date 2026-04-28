@@ -1,7 +1,8 @@
-
-function loginView()
-{
-    document.getElementById("app").innerHTML = /*HTML*/`
+export function loginView() {
+    const appElement = document.getElementById("app");
+    if (!appElement) return;
+    
+    appElement.innerHTML = /*HTML*/`
         <form onsubmit="handlelogin(event)">
             <label for="uname">username:</label>
             <input id='uname' type="text" placeholder="Social Security">

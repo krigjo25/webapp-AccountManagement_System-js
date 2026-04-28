@@ -1,42 +1,76 @@
-# Sparebank1 Web Application
-A functional banking application interface featuring secure login, fund transfers, and profile management within a modular MVC framework.
+# Account Management System (Bank1)
+
+Dette er en moderne webapplikasjon for kontohåndtering, migrert fra JavaScript til **TypeScript** med **Vite** som byggverktøy. Prosjektet følger en modulær MVC-struktur (Model-View-Controller) med et klart skille mellom kildekode og genererte filer.
+
+## 🚀 Teknologistakk
+
+- **Frontend:** HTML5, CSS3, TypeScript
+- **Byggverktøy:** [Vite](https://vitejs.dev/)
+- **Språk:** [TypeScript](https://www.typescript.org/)
+- **Arkitektur:** MVC (Model-View-Controller)
+
+## 📋 Beskrivelse
+
+Applikasjonen simulerer en banktjeneste (Sparebank1) hvor brukere kan:
+- Registrere seg med personnummer, navn og e-post.
+- Logge inn sikkert.
+- Se oversikt over brukskontoer og sparekontoer (Dashboard).
+- Utføre overføringer mellom kontoer.
+- Håndtere profilinformasjon.
+
+Prosjektet er nå fullstendig type-sikkert, som reduserer sjansen for "runtime"-feil og gjør koden lettere å vedlikeholde. Kildekoden skrives i TypeScript og kompileres automatisk til JavaScript.
+
+## 🛠 Installasjon og Oppstart
+
+### Forutsetninger
+- [Node.js](https://nodejs.org/) (versjon 18 eller nyere anbefales)
+- npm (følger med Node.js)
+
+### Steg for steg
+
+1.  **Klone prosjektet:**
+    ```bash
+    git clone https://github.com/krigjo25/webapp-AccountManagement_System-js.git
+    cd webapp-AccountManagement_System-js
+    ```
+
+2.  **Installere avhengigheter:**
+    ```bash
+    npm install
+    ```
+    *Merk: Hvis du jobber på et filsystem som ikke støtter symlinks (f.eks. Google Drive via WSL), bruk `npm install --no-bin-links`.*
+
+3.  **Kjøre utviklingsserver:**
+    ```bash
+    npm run dev
+    ```
+    Applikasjonen vil være tilgjengelig på `http://localhost:5173`. Vite vil automatisk håndtere TypeScript-filene dine under utvikling.
+
+4.  **Kompilere TypeScript manuelt:**
+    Hvis du ønsker å generere JavaScript-filene i `statics/js`:
+    ```bash
+    npx tsc
+    ```
+
+5.  **Bygge for produksjon:**
+    ```bash
+    npm run build
+    ```
+    Dette vil kjøre type-sjekking og bygge en optimalisert versjon i `dist/`-mappen.
+
+## 📂 Prosjektstruktur
+
+- `index.html`: Inngangspunkt for applikasjonen.
+- `statics/ts/`: **Kildekode (TypeScript)**
+    - `main.ts`: Hovedlogikk og ruting (Inngangspunkt for JS).
+    - `model.ts`: Datamodellen og tilstandshåndtering.
+    - `types.ts`: TypeScript-grensesnitt (interfaces).
+    - `controller.ts`: Universelle kontrollere.
+    - `login/`, `register/`, `dashboard/`: Modulspesifikke views og kontrollere.
+- `statics/js/`: **Generert kode (JavaScript)**
+    - Denne mappen er ignorert av Git og inneholder filene generert av TypeScript-kompilatoren.
+- `tsconfig.json`: Konfigurasjon for TypeScript.
+- `package.json`: Prosjektinformasjon og skript.
 
 ---
-
-## Overview
-This project is a prototype for a secure banking platform, developed to handle essential financial workflows. It provides a structured environment for users to manage their accounts, execute currency transfers, and update personal profiles. The application relies on a robust MVC (Model-View-Controller) architecture, ensuring that sensitive financial logic is strictly separated from the user interface.
-
-## Core Features
-* **Secure Authentication**: Dedicated modules for user login and registration to ensure data privacy.
-* **Transaction Management**: A specialized transfer view for managing and executing movements between accounts.
-* **Dashboard Overview**: A centralized hub providing a snapshot of account status and quick access to banking tools.
-* **Modular Controller Logic**: Independent controllers for login, registration, and dashboard operations to maintain high code quality.
-* **Profile Administration**: Interface for users to view and edit their personal banking credentials and settings.
-
-## Installation and Technical Setup
-The application is built using a decoupled JavaScript structure and can be hosted on any standard web server.
-
-### Prerequisites
-* A modern web browser.
-* Access to the `statics/js/` directory containing the core logic.
-
-### Deployment Steps
-1.  **Extract Components**: Unzip the `js.tar.gz` and ensure the directory structure matches the references in `index.html`.
-2.  **Initialize Environment**: Ensure `model.js` is loaded first to establish the global banking state.
-3.  **Launch**: Open `index.html` to start the application at the default login gateway.
-
-## Architecture
-The system utilizes a granular MVC approach:
-* **Global Model (model.js)**: Stores account balances, user data, and the current application state.
-* **Feature Controllers**: Specialized files (e.g., `login/controller.js`, `transfer/controller.js`) manage specific user actions.
-* **Dynamic Views**: View-specific scripts generate the HTML for the dashboard, signup, and profile screens.
-
-## Contributors
-Developed as a professional-grade financial interface focusing on modularity and user security.
-
----
-*Building secure and intuitive digital banking experiences.*
-
-
-Sincerely,
-@krigjo25
+Utviklet som en del av Sparebank1 konsept-demo.
